@@ -1,0 +1,9 @@
+.input-form {
+    width: 30%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.input-form:focus {
+    outline: none;
+}
