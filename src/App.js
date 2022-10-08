@@ -12,7 +12,8 @@ const cardList = [
     temperature: "18 °C",
     latitude: "-24.1950",
     longitude: "-65.3138",
-    img: "https://picsum.photos/seed/picsum/300/300",
+    windspeed: "4.1",
+    image: "https://picsum.photos/seed/picsum/300/300",
   },
   {
     id: 2,
@@ -20,7 +21,8 @@ const cardList = [
     temperature: "18 °C",
     latitude: "-24.1950",
     longitude: "-65.3138",
-    img: "https://picsum.photos/seed/picsum/300/300",
+    windspeed: "4.1",
+    image: "",
   },
   {
     id: 3,
@@ -28,7 +30,8 @@ const cardList = [
     temperature: "18 °C",
     latitude: "-24.1950",
     longitude: "-65.3138",
-    img: "https://picsum.photos/seed/picsum/300/300",
+    windspeed: "4.1",
+    image: "https://picsum.photos/seed/picsum/300/300",
   },
   {
     id: 4,
@@ -36,7 +39,8 @@ const cardList = [
     temperature: "18 °C",
     latitude: "-24.1950",
     longitude: "-65.3138",
-    img: "https://picsum.photos/seed/picsum/300/300",
+    windspeed: "4.1",
+    image: "",
   },
   {
     id: 5,
@@ -44,7 +48,8 @@ const cardList = [
     temperature: "18 °C",
     latitude: "-24.1950",
     longitude: "-65.3138",
-    img: "https://picsum.photos/seed/picsum/300/300",
+    windspeed: "4.1",
+    image: "https://picsum.photos/seed/picsum/300/300",
   },
 ];
 
@@ -57,7 +62,7 @@ function App() {
       localStorage.setItem(card.id, JSON.stringify(card));
     });
     setCards(cardList);
-  }, []);
+  }, [setCards]);
 
   return (
     <div className="App">
