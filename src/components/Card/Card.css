@@ -2,7 +2,8 @@
     width: 300px;
     border: none;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(24, 47, 93, 0.4);
+    backdrop-filter: blur( 4px );
     background: linear-gradient(to left top, rgba(255, 255, 255, 0.06)60%, rgba(255, 255, 255, 0.4));
     color: #fff;
 }

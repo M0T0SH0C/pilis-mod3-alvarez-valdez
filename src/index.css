@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
   font-family: 'Dosis', sans-serif;
-  /* font-family: 'Heebo', sans-serif; */
 }
 
 body {
-  background-image: radial-gradient(circle, #8fe0ff, #89d8fa, #83d0f5, #7ec7f0, #7abfeb, #70afde, #679ed1, #5f8ec3, #5273aa, #465890, #3b3e75, #31255a);
-  background-image: radial-gradient(circle, #5bc0be, #38a5b2, #168ba4, #007093, #00567f, #094972, #103c65, #132f57, #152b51, #16284a, #162444, #16213e);
-  /* background-image: radial-gradient(circle, #007093, #00658b, #005982, #014e78, #07436e, #1b3961, #232f54, #262647, #271e35, #221725, #1a1118, #0b090a); */
-  /* background-image: radial-gradient(circle, #0f3460, #123059, #142d53, #15294c, #162646, #1b223e, #1d1e36, #1e1a2f, #1e1625, #1b121b, #150e13, #0b090a); */
+  background-image: url('./assets/background.svg');
+
+  
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 
 }

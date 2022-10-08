@@ -1,11 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import {
-  BsXLg,
-  BsGeoAltFill,
-  BsThermometerHalf,
-  BsWind,
-} from "react-icons/bs";
+import { BsXLg, BsGeoAltFill, BsThermometerHalf, BsWind } from "react-icons/bs";
 import { CardsContext } from "../../context/CardsContext";
 import noImg from "../../assets/no-image.svg";
 import "./Card.css";
@@ -31,7 +26,11 @@ const Card = ({ card }) => {
             <BsXLg className="icon" />
           </button>
         </div>
-        <img className="card-img m-auto" src={image ? image : noImg} alt={ubication} />
+        <img
+          className="card-img m-auto"
+          src={image ? image : noImg}
+          alt={ubication}
+        />
         <div className="card-body text-center">
           <h4>
             <BsThermometerHalf />
