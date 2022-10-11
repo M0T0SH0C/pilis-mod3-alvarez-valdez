@@ -1,10 +1,12 @@
 import React from 'react'
 
-const Formularios1 = () => {
+const Formularios = () => {
   return (
     
-    <div>Formularios</div>
+    <div>
+      <h1>hola</h1>
+      </div>
   )
 }
 
-export default Formularios1
+export default Formularios

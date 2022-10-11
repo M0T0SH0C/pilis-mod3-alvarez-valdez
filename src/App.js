@@ -1,4 +1,5 @@
 import "./App.css";
+import "./components/Card/Card.css"
 import Home from "./routes/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
@@ -70,12 +71,16 @@ function App() {
     });
     setCards(cardList);
   }, [setCards]);
-
-  return (
+      
+  //FUNCION DEL BOTON //
+  
+      return (
     <div className="App">
 
-      <div className="btnform">
-    <button>AGREGAR NUEVA UBICACION CON DATOS</button>
+          <div className ="nuevob">    
+          <a href="./components/Formularios.jsx" target="Formularios" >
+          <button className="nuevob">AGREGAR NUEVA UBICACION</button>   
+          </a>       
   </div>
       <Routes>
         <Route>

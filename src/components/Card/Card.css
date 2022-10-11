@@ -46,3 +46,10 @@
     font-size: 26px;
 }
 
+.nuevob{  
+    background-color:transparent;
+    float: right;    
+    font-size: larger;
+    color: white;
+    border-color: transparent;
+}
