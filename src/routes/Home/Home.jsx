@@ -18,14 +18,24 @@ const Home = () => {
       );
 
   return (
-    <div>
+    <div className="container mb-5">
       <input
-        className="input-form"
-        type="tex"
+        className="form-control w-50 m-auto my-5"
+        type="text"
         placeholder="Buscar"
         value={query}
         onChange={handleChange}
       />
+      {!cardList.length > 0 && query && (
+        <h1 className="text-center text-light">No hay coincidencias</h1>
+      )}
+      {!cardList.length > 0 && !query && (
+        <div className="w-50 p-5 m-auto text-center text-light no-cards">
+          <h1>No hay tarjetas</h1>
+          <p>¿Quieres agregar una nueva?</p>
+          <button className="btn btn-light">Agregar</button>
+        </div>
+      )}
       <Cards cards={cardList} />
     </div>
   );
