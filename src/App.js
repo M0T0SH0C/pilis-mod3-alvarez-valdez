@@ -4,7 +4,8 @@ import Home from "./routes/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
-
+import Formularios from "./components/Formularios";
+ 
 
 
 // TODO: Quitar despues de implementar el formulario
@@ -72,19 +73,22 @@ function App() {
     setCards(cardList);
   }, [setCards]);
       
-  //FUNCION DEL BOTON //
+  
   
       return (
     <div className="App">
 
-          <div className ="nuevob">    
-          <a href="./components/Formularios.jsx" target="Formularios" >
-          <button className="nuevob">AGREGAR NUEVA UBICACION</button>   
-          </a>       
-  </div>
+            <div className ="nuevob">     
+           <a href="./components/Formularios.jsx" target="#Formularios" >            
+           <button className="nuevob">AGREGAR NUEVA UBICACION</button>           
+          </a>    
+  </div> 
+
+
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
+          <Route path="./components/Formularios.jsx" element ={Formularios}></Route>
         </Route>
       </Routes>
     </div>
