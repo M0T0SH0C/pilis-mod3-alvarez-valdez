@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import Cards from "../../components/Card/Cards";
 import { CardsContext } from "../../context/CardsContext";
 import "./Home.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Formularios1 from "../../components/Formularios";
 
 const Home = () => {
   const { cards } = useContext(CardsContext);
@@ -39,7 +41,7 @@ const Home = () => {
       <Cards cards={cardList} />      
   <div>
     <button className="btn btn-light">
-      <a href="Formulsrios.jsx">Crear nueva ubicacion</a>
+      <a href="Formularios1">Crear nueva ubicacion</a>
     </button>
   </div>
     </div>   
