@@ -72,23 +72,25 @@ function App() {
     });
     setCards(cardList);
   }, [setCards]);
-      
+
+ 
   
   
       return (
+        
     <div className="App">
-
-            <div className ="nuevob">     
-           <a href="./components/Formularios.jsx" target="#Formularios" >            
+       <nav>
+     <div className ="nuevob">     
+           <a href="./formularios/3">            
            <button className="nuevob">AGREGAR NUEVA UBICACION</button>           
           </a>    
   </div> 
-
+  </nav>    
 
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
-          <Route path="./components/Formularios.jsx" element ={Formularios}></Route>
+          <Route path="/formularios/:id" element ={<Formularios></Formularios>}></Route>
         </Route>
       </Routes>
     </div>
