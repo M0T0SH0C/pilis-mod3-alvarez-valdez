@@ -2,8 +2,7 @@ import React, { useState, useContext } from "react";
 import Cards from "../../components/Card/Cards";
 import { CardsContext } from "../../context/CardsContext";
 import "./Home.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Formularios1 from "../../components/Formularios";
+
 
 const Home = () => {
   const { cards } = useContext(CardsContext);
@@ -11,6 +10,8 @@ const Home = () => {
 
   const handleChange = (e) => {
     setQuery(e.target.value);
+
+
   };
 
   const cardList = !query
@@ -19,7 +20,8 @@ const Home = () => {
         card.ubication.toLowerCase().includes(query.toLowerCase())
       );
 
-  return (      
+
+  return (       
     <div className="container mb-5">
       <input
         className="form-control w-50 m-auto my-5"
@@ -35,18 +37,20 @@ const Home = () => {
         <div className="w-50 p-5 m-auto text-center text-light no-cards">
           <h1>No hay tarjetas</h1>
           <p>¿Quieres agregar una nueva?</p>
-          <button className="btn btn-light">Agregar</button>
+          <button className="btn btn-light">Agregar</button>          
         </div>
+               
       )}
-      <Cards cards={cardList} />      
-  <div>
-    <button className="btn btn-light">
-      <a href="Formularios1">Crear nueva ubicacion</a>
-    </button>
-  </div>
+      <Cards cards={cardList} />     
+  
     </div>   
+    
+    
   );
 };
+
+  
+
 
 
 export default Home;

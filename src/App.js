@@ -5,7 +5,13 @@ import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
 
 
+
 // TODO: Quitar despues de implementar el formulario
+
+
+
+
+
 const cardList = [
   {
     id: 1,
@@ -67,6 +73,10 @@ function App() {
 
   return (
     <div className="App">
+
+      <div className="btnform">
+    <button>AGREGAR NUEVA UBICACION CON DATOS</button>
+  </div>
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
