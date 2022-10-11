@@ -1,7 +1,6 @@
-.contnedor {
-    max-width: 80%;
-    height: 100vh;
-    margin: 0% auto;
-    padding: auto;
-    color: brown;
+.Latitud {
+    color: white;
+    text-size-adjust: 20;    
+    padding-top: 10%;
+    padding-left: 40%;
 }

@@ -81,7 +81,7 @@ function App() {
     <div className="App">
        <nav>
      <div className ="nuevob">     
-           <a href="./formularios/3">            
+           <a href="./formularios/()">            
            <button className="nuevob">AGREGAR NUEVA UBICACION</button>           
           </a>    
   </div> 
