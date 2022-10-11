@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
 
+
 // TODO: Quitar despues de implementar el formulario
 const cardList = [
   {
@@ -55,7 +56,7 @@ const cardList = [
 
 function App() {
   const { setCards } = useContext(CardsContext);
-
+  
   // TODO: Quitar despues de implementar el formulario
   useEffect(() => {
     cardList.forEach((card) => {
@@ -74,5 +75,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

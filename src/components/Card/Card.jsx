@@ -14,7 +14,7 @@ const Card = ({ card }) => {
     setCards(cards.filter((card) => card.id !== id));
     localStorage.removeItem(id);
   };
-  return (
+  return (     
     <div className="col-md-6 col-lg-4">
       <div className="card m-auto">
         <div className="d-flex justify-content-between">

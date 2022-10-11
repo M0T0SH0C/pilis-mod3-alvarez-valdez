@@ -17,7 +17,7 @@ const Home = () => {
         card.ubication.toLowerCase().includes(query.toLowerCase())
       );
 
-  return (
+  return (      
     <div className="container mb-5">
       <input
         className="form-control w-50 m-auto my-5"
@@ -36,9 +36,15 @@ const Home = () => {
           <button className="btn btn-light">Agregar</button>
         </div>
       )}
-      <Cards cards={cardList} />
-    </div>
+      <Cards cards={cardList} />      
+  <div>
+    <button className="btn btn-light">
+      <a href="Formulsrios.jsx">Crear nueva ubicacion</a>
+    </button>
+  </div>
+    </div>   
   );
 };
+
 
 export default Home;
