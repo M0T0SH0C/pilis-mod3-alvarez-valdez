@@ -38,7 +38,7 @@ form {
 }
 form input[type="text"], form input[type="submit"], form input[type="url"],form select{
     width: 100%;
-    margin: 0px 0 25px;
+    margin: 0px 0 20px;
     display: inline-block;
     border: 1px solid rgb(31, 16, 241);
     box-shadow: inset 0 1px 3px #ddd;
@@ -51,6 +51,9 @@ form input[type="text"], form input[type="submit"], form input[type="url"],form 
     padding-top: 12px;
     padding-bottom: 12px;
     font-family: 'Montserrat', sans-serif;
+}
+form input[type="text"], form input[type="url"]:focus {
+    outline: none;
 }
 form input[type="submit"]{
     width: 100%;
@@ -70,4 +73,14 @@ form input[type="submit"]:hover{
 .alert-message {
     margin: 24px 0 0;
     color: red!important;
+}
+
+.error {
+    border: 2px solid #E94560 !important;
+}
+
+.label-error {
+    font-size: 18px;
+    text-align: left;
+    color: #E94560 !important;
 }
