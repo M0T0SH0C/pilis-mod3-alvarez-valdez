@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 
 const Formularios = () => {
     const {cards, setCards} = useContext(CardsContext)
-    const { register, handleSubmit, formState: {errors}} = useForm();
+    const { register, handleSubmit, formState: {}} = useForm();
     const navigate = useNavigate();
 
     const onSubmit = (data)=>{
