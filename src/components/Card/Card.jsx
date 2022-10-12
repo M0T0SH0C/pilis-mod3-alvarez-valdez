@@ -4,6 +4,7 @@ import { BsXLg, BsGeoAltFill, BsThermometerHalf, BsWind } from "react-icons/bs";
 import { CardsContext } from "../../context/CardsContext";
 import noImg from "../../assets/no-image.svg";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 const Card = ({ card }) => {
   const { cards, setCards } = useContext(CardsContext);
@@ -12,14 +13,12 @@ const Card = ({ card }) => {
 
   const handleDelete = () => {
     setCards(cards.filter((card) => card.id !== id));
-    localStorage.removeItem(id);    
+    localStorage.removeItem(id);
   };
 
-  
-
-  return (        
+  return (
     <div className="col-md-6 col-lg-4">
-      <div className="card m-auto">
+      <div className="card m-auto see-card">
         <div className="d-flex justify-content-between">
           <h5 className="text-start m-3">
             <BsGeoAltFill className="me-2 icon" />
@@ -53,6 +52,7 @@ const Card = ({ card }) => {
             <BsWind className="me-2" />
             {windspeed} Km/h
           </p>
+          <Link className="stretched-link" to={`/card/${id}`}></Link>
         </div>
       </div>
     </div>

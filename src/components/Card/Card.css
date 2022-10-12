@@ -5,6 +5,7 @@
     box-shadow: 0 8px 32px 0 rgba(24, 47, 93, 0.4);
     backdrop-filter: blur( 4px );
     background: linear-gradient(to left top, rgba(255, 255, 255, 0.06)60%, rgba(255, 255, 255, 0.4));
+    transition: 0.5s backdrop-filter ease, 0.5s outline-color ease;
     color: #fff;
 }
 
@@ -15,13 +16,15 @@
 }
 
 .card .btn {
+    position: relative;
+    z-index: 2;
     padding: 0;
     border-radius: 100%;
 }
 
 .card .btn .icon {
     font-size: 20px;
-    color: rgb(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
     opacity: 0;
     transition: 0.5s opacity ease, 0.5s color ease;
 }
@@ -52,4 +55,9 @@
     font-size: larger;
     color: white;
     border-color: transparent;
+}
+
+.see-card:hover {
+    backdrop-filter: blur( 8px );
+    outline-color: rgba(255, 255, 255, 0.6);
 }
