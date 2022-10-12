@@ -4,7 +4,7 @@ import Home from "./routes/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
-import Formularios from "./components/Formularios";
+import Formularios from "./routes/Formulario/Formularios.jsx";
 
 // TODO: Quitar despues de implementar el formulario
 
