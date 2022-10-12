@@ -1,17 +1,17 @@
 const result = document.querySelector('.result');
 const form = document.querySelector('.get-weather');
-const nameCity = document.querySelector('#latitud');
-const nameCountry = document.querySelector('#longitud');
+const nameLatitud = document.querySelector('#latitud');
+const nameLongitud = document.querySelector('#longitud');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if (nameCity.value === '' || nameCountry.value === '') {
+    if (nameLongitud.value === '' || nameLatitud.value === '') {
         showError('Ambos campos son obligatorios...');
         return;
     }
 
-    callAPI(nameCity.value, nameCountry.value);
+    callAPI(nameLatitud.value, nameLongitud.value);
     //console.log(nameCity.value);
     //console.log(nameCountry.value);
 })
