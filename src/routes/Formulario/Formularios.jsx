@@ -22,7 +22,7 @@ const Formularios = () => {
                 latitude: res.latitude ,
                 longitude: res.longitude,
                 temperature: res.current_weather.temperature , 
-                windspeed: res.current_weather.windspeed , 
+                windspeed: res.current_weather.windspeed ,                
                 image: data.imagen, 
             }
             setCards([...cards, newCard]);
@@ -45,19 +45,16 @@ const Formularios = () => {
                 title: 'Oops...',
                 text: 'Algo malo ha pasado!',
               })
-        })
-
-
-        
+        })        
 
     }
   return (
     <section className="weather-content">
-        <h1>Buscador del clima</h1>
+        <h1>Crear Nueva tarjeta por Coordenadas</h1>
         <div className="result">
-            <p>Agrege cuidad y pais</p>
-            <h5>Clima en JuJuy</h5>
-            <img src="" alt=""></img>
+            <p>Agrege cuidad / longitud / latitud / Pais </p>
+            <h5>A continuacion vera informacion del clima</h5>
+            <img src="//widget.time.is/t.js" alt=""></img>            
             <h2>28°C</h2>
             <p>Max: 29°C</p>
             <p>Min: 27°C</p> 
@@ -66,9 +63,7 @@ const Formularios = () => {
             <input type="text" {...register("city", {required: "Debe igresar el nombre de la ciudad"})} id="city" placeholder="Nombre de tu ciudad / provincia..."></input>          
             <input type="text" {...register("latitud", {required: "Debe igresar la latitud"})} id="latitud" placeholder="Escribe la Latitud..."></input>           
             <input type="text" {...register("longitud", {required: "Debe igresar la longitud"})} id="longitud" placeholder="Escribe la Longitud..."></input>
-            <input type="url" {...register("imagen")} id="imagen" placeholder="Escribe la url de la imagen..."></input>
-            
-            {/* <select name="" id="country">
+                <select name="" id="country">
                 <option disabled selected value="">Selecctiona tu pais </option>
                 <option value="AR">Argentina</option>
                 <option value="CO">Colombia</option>
@@ -77,8 +72,17 @@ const Formularios = () => {
                 <option value="US">Estados Unidos</option>
                 <option value="MX">México</option>
                 <option value="PE">Perú</option>
-            </select> */}
+            </select> 
+            <input type="url" {...register("imagen")} id="imagen" placeholder="Escribe la url de la imagen..."></input>
+        
             <input type="submit" value="Crear nueva ubicacion"></input>
+
+            let d = new Date();
+            document.getElementById("date").innerHTML 
+  "<h1>Current time: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()  + "</h1>"
+
+        
+            
         </form>    
     </section>     
   )

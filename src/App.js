@@ -11,12 +11,14 @@ import Formularios from "./routes/Formulario/Formularios.jsx";
 const cardList = [
   {
     id: 1,
-    ubication: "Ciudad Cultural",
+    ubication: "Ciudad Cultural", 
+    country : "Argentina",    
     temperature: "18 °C",
     latitude: "-24.1950",
     longitude: "-65.3138",
     windspeed: "4.1",
     image: "https://picsum.photos/seed/picsum/300/300",
+    
   },
   {
     id: 2,
