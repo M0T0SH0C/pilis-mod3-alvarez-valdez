@@ -74,14 +74,15 @@ function App() {
     <div className="App">
        
       <div className ="nuevob">     
-           <a href="./formularios/()">            
+           <a href="./formularios/">            
            <button className="nuevob">AGREGAR NUEVA UBICACION</button>           
           </a>   
          </div>     
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
-          <Route path="/formularios/:id" element ={<Formularios></Formularios>}></Route>
+          <Route path="/formularios/" element ={<Formularios></Formularios>}></Route>
+          <Route path="./routes/Descripcion"></Route>
         </Route>
       </Routes>
     </div>
