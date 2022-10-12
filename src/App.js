@@ -5,14 +5,8 @@ import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
 import Formularios from "./components/Formularios";
- 
-
 
 // TODO: Quitar despues de implementar el formulario
-
-
-
-
 
 const cardList = [
   {
@@ -76,17 +70,14 @@ function App() {
  
   
   
-      return (
-        
+      return (        
     <div className="App">
-       <nav>
-     <div className ="nuevob">     
+       
+      <div className ="nuevob">     
            <a href="./formularios/()">            
            <button className="nuevob">AGREGAR NUEVA UBICACION</button>           
-          </a>    
-  </div> 
-  </nav>    
-
+          </a>   
+         </div>     
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
