@@ -36,9 +36,15 @@ const Home = () => {
       {!cardList.length > 0 && !query && (
         <div className="w-50 p-5 m-auto text-center text-light no-cards">
           <h1>No hay tarjetas</h1>
-          <p>¿Quieres agregar una nueva?</p>
-          <button className="btn btn-light">Agregar</button>          
+          <p>¿Quieres agregar una nueva?</p>  
+          <div className ="btnagregar">     
+        <a href="./formularios/">            
+        <button className="btnagregar">AGREGAR</button>           
+       </a>   
+      </div>  
+              
         </div>
+        
                
       )}
       <Cards cards={cardList} />     

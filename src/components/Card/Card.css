@@ -53,3 +53,9 @@
     color: white;
     border-color: transparent;
 }
+
+.btnagregar {
+    color: white;
+    background-color: transparent;
+    border-color: rgb(20, 236, 182);
+}
