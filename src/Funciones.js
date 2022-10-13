@@ -10,3 +10,5 @@ export const getForecast = async (latitud, longitud) => {
     }        
 }
 
+
+

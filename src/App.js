@@ -76,6 +76,7 @@ function App() {
           {/* TODO: Agregar nueva página en "NombrePagina" */}
           {/* <Route path="card/:id" element={<NombrePagina />} /> */}
           <Route path="card/create" element={<Formularios />} />
+          
         </Route>
       </Routes>
     </div>
