@@ -106,6 +106,22 @@ const Formularios = () => {
             </select> */}
         <input type="submit" value="Crear nueva ubicacion"></input>
       </form>
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
     </section>
   );
 };
