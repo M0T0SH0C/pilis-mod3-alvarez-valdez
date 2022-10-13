@@ -18,8 +18,14 @@ const Navigation = () => {
               <Link className="nav-link link" to="/card/create">
                 <BsPlusSquare className="icon" />
                 NUEVA UBICACION
-              </Link>
-            </li>
+              </Link>              
+            </li>                      
+              <Link className="nav-link2 link" to="../Mapsygeo/Mapsygeos.jsx">      
+              VER EL MAPA
+              </Link>              
+            
+            
+
           </div>
         </div>
       </nav>
