@@ -105,12 +105,13 @@ const Formularios = () => {
                 <option value="PE">Perú</option>
             </select> */}
         <input type="submit" value="Crear nueva ubicacion"></input>
-      </form>
+      </form>     
 
 
 
 
-      
+
+
 
 
 
