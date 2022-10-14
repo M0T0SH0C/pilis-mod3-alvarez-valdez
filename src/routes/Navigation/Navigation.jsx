@@ -4,10 +4,6 @@ import "./Navigation.css";
 import { BsPlusSquare } from "react-icons/bs";
 import { Link, Outlet } from "react-router-dom";
 
-
-
-
-
 const Navigation = () => {
   return (
     <>
@@ -22,13 +18,14 @@ const Navigation = () => {
               <Link className="nav-link link" to="/card/create">
                 <BsPlusSquare className="icon" />
                 NUEVA UBICACION
-              </Link>              
-            </li>             
-                      </div>
-                      <div><Link className="nav-link2 link" to="/Mapas">     
-              VER EL MAPA
               </Link>
-              </div>
+            </li>
+          </div>
+          <div>
+            <Link className="nav-link2 link" to="/Mapas">
+              VER EL MAPA
+            </Link>
+          </div>
         </div>
       </nav>
       <Outlet />

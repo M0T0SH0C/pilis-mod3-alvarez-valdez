@@ -1,10 +1,10 @@
-import React from 'react'
-import { Route, Routes } from "react-router-dom";
+import React from "react";
 
-const Mapa = () => {
+const MapasOnline = () => {
   return (
-    <div>Mapsygeos</div>
-  )
-}
-
-export default Mapa
+    <div>
+      <h1> hola como estas</h1>
+    </div>
+  );
+};
+export default MapasOnline;

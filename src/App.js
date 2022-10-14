@@ -6,6 +6,7 @@ import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
 import Formularios from "./routes/Formulario/Formulario.jsx";
 import Navigation from "./routes/Navigation/Navigation";
+import MapasOnline from "./routes/Mapsygeo/Mapsygeos";
 // TODO: Quitar despues de implementar el formulario
 
 const cardList = [
@@ -74,9 +75,8 @@ function App() {
           <Route index element={<Home />} />
           {/* TODO: Agregar nueva página en "NombrePagina" */}
           {/* <Route path="card/:id" element={<NombrePagina />} /> */}
-          <Route path="card/create" element={<Formularios />} />  
-          <Route path="./routes/Mapsygeo" elemento ={<Mapa></Mapa>}></Route>        
-                 
+          <Route path="card/create" element={<Formularios />} />
+          <Route path="Mapas" element={<MapasOnline></MapasOnline>}></Route>
         </Route>
       </Routes>
     </div>
