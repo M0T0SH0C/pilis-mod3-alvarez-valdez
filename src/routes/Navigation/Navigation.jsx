@@ -23,14 +23,12 @@ const Navigation = () => {
                 <BsPlusSquare className="icon" />
                 NUEVA UBICACION
               </Link>              
-            </li>                      
-              <Link className="nav-link2 link" to="../Mapsygeo/Mapsygeos.jsx">      
+            </li>             
+                      </div>
+                      <div><Link className="nav-link2 link" to="/Mapas">     
               VER EL MAPA
-              </Link>              
-            
-            
-
-          </div>
+              </Link>
+              </div>
         </div>
       </nav>
       <Outlet />
