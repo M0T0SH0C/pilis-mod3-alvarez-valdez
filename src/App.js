@@ -74,7 +74,8 @@ function App() {
           <Route index element={<Home />} />
           {/* TODO: Agregar nueva página en "NombrePagina" */}
           {/* <Route path="card/:id" element={<NombrePagina />} /> */}
-          <Route path="card/create" element={<Formularios />} />                 
+          <Route path="card/create" element={<Formularios />} />  
+          <Route path="./routes/Mapsygeo" elemento ={<Mapa></Mapa>}></Route>        
                  
         </Route>
       </Routes>
