@@ -1,11 +1,12 @@
 import "./App.css";
-import "./components/Card/Card.css"
+import "./components/Card/Card.css";
 import Home from "./routes/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
-import Formularios from "./routes/Formulario/Formularios.jsx";
-
+import Formularios from "./routes/Formulario/Formulario.jsx";
+import Navigation from "./routes/Navigation/Navigation";
+import MapasOnline from "./routes/Mapsygeo/Mapsygeos";
 // TODO: Quitar despues de implementar el formulario
 
 const cardList = [
@@ -60,7 +61,7 @@ const cardList = [
 
 function App() {
   const { setCards } = useContext(CardsContext);
-  
+
   // TODO: Quitar despues de implementar el formulario
   useEffect(() => {
     cardList.forEach((card) => {
@@ -69,11 +70,9 @@ function App() {
     setCards(cardList);
   }, [setCards]);
 
- 
-  
-  
-      return (        
+  return (
     <div className="App">
+<<<<<<< HEAD
        
       <div className ="nuevob">     
            <a href="./formularios/">            
@@ -85,6 +84,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/formularios/" element ={<Formularios></Formularios>}></Route>
           <Route path="./routes/Descripcion"></Route>
+=======
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          {/* TODO: Agregar nueva página en "NombrePagina" */}
+          {/* <Route path="card/:id" element={<NombrePagina />} /> */}
+          <Route path="card/create" element={<Formularios />} />
+          <Route path="Mapas" element={<MapasOnline></MapasOnline>}></Route>
+>>>>>>> dev
         </Route>
       </Routes>
     </div>

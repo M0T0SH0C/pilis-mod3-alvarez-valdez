@@ -8,10 +8,13 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.2",
     "bootstrap": "^5.2.2",
+    "leaflet": "^1.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.36.1",
     "react-icons": "^4.4.0",
+    "react-leaflet": "^4.1.0",
+    "react-page-maker": "^1.1.31",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "sweetalert2": "^11.5.1",
@@ -40,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.8.0"
   }
 }
