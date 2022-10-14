@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import MarkerIcon from "../../assets/punto.png";
-import { useEffect, useRef } from "react";
+//import { useEffect, useRef } from "react";
 import "./Mapsygeos.css";
 
 const icon = L.icon({

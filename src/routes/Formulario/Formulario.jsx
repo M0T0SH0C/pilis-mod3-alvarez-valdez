@@ -93,20 +93,21 @@ const Formularios = () => {
           id="imagen"
           placeholder="Escribe la url de la imagen..."
         />
-
-        {/* <select name="" id="country">
-                <option disabled selected value="">Selecctiona tu pais </option>
-                <option value="AR">Argentina</option>
-                <option value="CO">Colombia</option>
-                <option value="CR">Costa Rica</option>
-                <option value="ES">España</option>
-                <option value="US">Estados Unidos</option>
-                <option value="MX">México</option>
-                <option value="PE">Perú</option>
-            </select> */}
+        <select name="" id="country">
+          <option disabled selected value="">
+            Selecctiona tu pais{" "}
+          </option>
+          <option value="AR">Argentina</option>
+          <option value="CO">Colombia</option>
+          <option value="CR">Costa Rica</option>
+          <option value="ES">España</option>
+          <option value="US">Estados Unidos</option>
+          <option value="MX">México</option>
+          <option value="PE">Perú</option>
+        </select>
         <input type="submit" value="Crear nueva ubicacion"></input>
-      </form>     
-          </section>
+      </form>
+    </section>
   );
 };
 
