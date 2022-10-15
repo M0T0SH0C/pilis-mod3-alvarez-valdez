@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
-import "./Formulario.css";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { CardsContext } from "../../context/CardsContext";
-import { getForecast } from "../../Funciones";
 import "sweetalert2/dist/sweetalert2.css";
 import Swal from "sweetalert2";
+import dayjs from "dayjs";
+import { CardsContext } from "../../context/CardsContext";
+import { getForecast } from "../../service";
+import "./CardForm.css";
 
 const Formularios = () => {
   const { cards, setCards } = useContext(CardsContext);
@@ -27,13 +28,16 @@ const Formularios = () => {
           temperature: res.current_weather.temperature,
           windspeed: res.current_weather.windspeed,
           image: data.imagen,
+          date: dayjs().format(),
         };
+        console.log(res);
         setCards([...cards, newCard]);
         Swal.fire({
           title: "Aviso",
           text: "Tarjeta creada exitosamente!",
           icon: "success",
           confirmButtonText: "OK",
+          confirmButtonColor: "#356BB1",
         }).then((result) => {
           if (result.isConfirmed) {
             navigate("/");
@@ -51,22 +55,13 @@ const Formularios = () => {
   };
   return (
     <section className="weather-content">
-      <h1>Buscador del clima</h1>
-      <div className="result">
-        <p>Agrege cuidad y pais</p>
-        <h5>Clima en JuJuy</h5>
-        <img src="" alt=""></img>
-        <h2>28°C</h2>
-        <p>Max: 29°C</p>
-        <p>Min: 27°C</p>
-      </div>
+      <h1 className="mb-4">Nueva Tarjeta</h1>
       <form onSubmit={handleSubmit(onSubmit)} name="get-weather">
         <input
           type="text"
           {...register("city", {
             required: "Debe igresar el nombre de la ciudad",
           })}
-          id="city"
           placeholder="Nombre de tu ciudad / provincia..."
           className={`${errors.city && "error"}`}
         />
@@ -74,7 +69,6 @@ const Formularios = () => {
         <input
           type="text"
           {...register("latitud", { required: "Debe igresar la latitud" })}
-          id="latitud"
           placeholder="Escribe la Latitud..."
           className={`${errors.latitud && "error"}`}
         />
@@ -82,7 +76,6 @@ const Formularios = () => {
         <input
           type="text"
           {...register("longitud", { required: "Debe igresar la longitud" })}
-          id="longitud"
           placeholder="Escribe la Longitud..."
           className={`${errors.longitud && "error"}`}
         />
@@ -90,21 +83,8 @@ const Formularios = () => {
         <input
           type="url"
           {...register("imagen")}
-          id="imagen"
           placeholder="Escribe la url de la imagen..."
         />
-        <select name="" id="country">
-          <option disabled selected value="">
-            Selecctiona tu pais{" "}
-          </option>
-          <option value="AR">Argentina</option>
-          <option value="CO">Colombia</option>
-          <option value="CR">Costa Rica</option>
-          <option value="ES">España</option>
-          <option value="US">Estados Unidos</option>
-          <option value="MX">México</option>
-          <option value="PE">Perú</option>
-        </select>
         <input type="submit" value="Crear nueva ubicacion"></input>
       </form>
     </section>

@@ -1,0 +1,63 @@
+.background {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(24, 47, 93, 0.4);
+    backdrop-filter: blur( 4px );
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.details-card {
+    height: 100%;
+}
+
+.details-card img {
+    border-radius: 6px;
+}
+
+.hourly-aside {
+    height: calc(100vh - var(--navbar-height));
+    overflow: auto;
+    position: sticky;
+    top: 0;
+}
+
+.hourly-aside::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main::-webkit-scrollbar {
+    width: 14px;
+}
+  
+.hourly-aside::-webkit-scrollbar-track,
+.main::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+ 
+.hourly-aside::-webkit-scrollbar-thumb,
+.main::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 12px;
+}
+
+.hourly-aside::-webkit-scrollbar-thumb:hover,
+.main::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.main {
+    height: calc(100vh - var(--navbar-height));
+    overflow: auto;
+    position: sticky;
+    top: 0;
+}
+
+.main .map {
+    height: calc(100vh - var(--navbar-height));
+}
+
+.main .map img {
+    height: 100%;
+    width: 100%;
+}

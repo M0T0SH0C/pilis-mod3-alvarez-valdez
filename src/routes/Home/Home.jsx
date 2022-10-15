@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import Cards from "../../components/Card/Cards";
 import { CardsContext } from "../../context/CardsContext";
+import Cards from "../../components/Card/Cards";
 import "./Home.css";
 
 const Home = () => {

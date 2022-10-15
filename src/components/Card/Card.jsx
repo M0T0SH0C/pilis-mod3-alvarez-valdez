@@ -1,10 +1,10 @@
 import React from "react";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { BsXLg, BsGeoAltFill, BsThermometerHalf, BsWind } from "react-icons/bs";
 import { CardsContext } from "../../context/CardsContext";
 import noImg from "../../assets/no-image.svg";
 import "./Card.css";
-import { Link } from "react-router-dom";
 
 const Card = ({ card }) => {
   const { cards, setCards } = useContext(CardsContext);
@@ -36,7 +36,7 @@ const Card = ({ card }) => {
         <div className="card-body text-center">
           <h4>
             <BsThermometerHalf />
-            {temperature}
+            {temperature} °C
           </h4>
           <div className="row coordinates my-4">
             <div className="col-6 border-end">
