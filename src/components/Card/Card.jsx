@@ -36,7 +36,7 @@ const Card = ({ card }) => {
         <div className="card-body text-center">
           <h4>
             <BsThermometerHalf />
-            {temperature}
+            {temperature} °C
           </h4>
           <div className="row coordinates my-4">
             <div className="col-6 border-end">
