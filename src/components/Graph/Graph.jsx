@@ -22,7 +22,7 @@ ChartJS.register(
   Legend
 );
 
-const Graph = ({ hourly }) => {
+const Graph = ({ time, variable, label }) => {
 
   const options = {
     responsive: true,
@@ -57,13 +57,13 @@ const Graph = ({ hourly }) => {
       },
     },
   };
-  const labels = hourly.time;
+  const labels = time;
   const data = {
     labels,
     datasets: [
       {
-        label: "Variacion de Temperatura",
-        data: hourly.temperature,
+        label:label,
+        data: variable,
         borderColor: "rgb(255, 255, 255)",
         backgroundColor: "rgba(255, 255, 255, 0.5)",
       },

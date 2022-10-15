@@ -3,6 +3,7 @@ import { BsFillGeoAltFill, BsThermometerHalf, BsWind } from "react-icons/bs";
 import dayjs from "dayjs";
 import { es } from "dayjs/locale/es";
 import noImg from "../../assets/no-image.svg";
+import "./MiniCard.css";
 
 const MiniCard = ({ card }) => {
   const {
@@ -20,7 +21,7 @@ const MiniCard = ({ card }) => {
 
   return (
     <div className="details-card background ms-3 px-3">
-      <h5 className="my-3">
+      <h5 className="my-4">
         <BsFillGeoAltFill className="me-2" />
         {ubication}
       </h5>
@@ -33,7 +34,7 @@ const MiniCard = ({ card }) => {
           />
         </div>
         <div className="col-6 d-none d-lg-block">
-          <h4>
+          <h4 className="temperature">
             <BsThermometerHalf />
             {temperature} °C
           </h4>
@@ -41,7 +42,7 @@ const MiniCard = ({ card }) => {
         </div>
         <div className="col-6 row d-lg-none">
           <div className="col-12">
-            <h4>
+            <h4 className="temperature">
               <BsThermometerHalf />
               {temperature} °C
             </h4>
@@ -58,7 +59,7 @@ const MiniCard = ({ card }) => {
         </div>
       </div>
       <div className="d-none d-lg-block">
-        <div className="row coordinates mt-3 text-center">
+        <div className="row coordinates mt-4 text-center">
           <div className="col-6 border-end">
             <span>Latitud</span>
             <span>{latitude}</span>
@@ -69,7 +70,7 @@ const MiniCard = ({ card }) => {
           </div>
         </div>
       </div>
-      <p className="text-center mt-3">
+      <p className="text-center mt-4 windspeed">
         <BsWind className="me-2" />
         {windspeed} Km/h
       </p>

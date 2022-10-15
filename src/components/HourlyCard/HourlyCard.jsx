@@ -11,19 +11,19 @@ const HourlyCard = ({ hourly }) => {
 
   return (
     <div className="m-3 row p-2 text-center hourly-item">
-      <div className="col-3">
+      <div className="col-6 col-lg-3">
         <BsClock className="me-2 icon" />
         {date}
       </div>
-      <div className="col-3">
+      <div className="col-6 col-lg-3">
         <BsDroplet className="me-2 icon" />
         {relativehumidity} %
       </div>
-      <div className="col-3">
+      <div className="col-6 col-lg-3 mt-2 mt-lg-0">
         <BsThermometerHalf className="me-2 icon" />
         {temperature} °C
       </div>
-      <div className="col-3">
+      <div className="col-6 col-lg-3 mt-2 mt-lg-0">
         <BsWind className="me-2 icon" />
         {windspeed} km/h
       </div>
