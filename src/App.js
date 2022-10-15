@@ -4,7 +4,8 @@ import Home from "./routes/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { CardsContext } from "./context/CardsContext";
-import Formularios from "./routes/Formulario/Formulario.jsx";
+import Formularios from "./routes/Formulario/Formulario";
+import Descripcion from "./routes/Descripcion/Descripcion";
 import Navigation from "./routes/Navigation/Navigation";
 import MapasOnline from "./routes/Mapsygeo/Mapsygeos";
 // TODO: Quitar despues de implementar el formulario
@@ -12,14 +13,13 @@ import MapasOnline from "./routes/Mapsygeo/Mapsygeos";
 const cardList = [
   {
     id: 1,
-    ubication: "Ciudad Cultural", 
-    country : "Argentina",    
+    ubication: "Ciudad Cultural",
+    country: "Argentina",
     temperature: "18 °C",
     latitude: "-24.1950",
     longitude: "-65.3138",
     windspeed: "4.1",
     image: "https://picsum.photos/seed/picsum/300/300",
-    
   },
   {
     id: 2,
@@ -72,27 +72,12 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<< HEAD
-       
-      <div className ="nuevob">     
-           <a href="./formularios/">            
-           <button className="nuevob">AGREGAR NUEVA UBICACION</button>           
-          </a>   
-         </div>     
-      <Routes>
-        <Route>
-          <Route path="/" element={<Home />} />
-          <Route path="/formularios/" element ={<Formularios></Formularios>}></Route>
-          <Route path="./routes/Descripcion"></Route>
-=======
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
-          {/* TODO: Agregar nueva página en "NombrePagina" */}
-          {/* <Route path="card/:id" element={<NombrePagina />} /> */}
+          <Route path="card/:id" element={<Descripcion />} />
           <Route path="card/create" element={<Formularios />} />
-          <Route path="Mapas" element={<MapasOnline></MapasOnline>}></Route>
->>>>>>> dev
+          <Route path="map" element={<MapasOnline></MapasOnline>}></Route>
         </Route>
       </Routes>
     </div>

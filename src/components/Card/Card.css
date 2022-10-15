@@ -57,14 +57,13 @@
     border-color: transparent;
 }
 
-<<<<<<< HEAD
 .btnagregar {
     color: white;
     background-color: transparent;
     border-color: rgb(20, 236, 182);
-=======
+}
+
 .see-card:hover {
     backdrop-filter: blur( 8px );
     outline-color: rgba(255, 255, 255, 0.6);
->>>>>>> dev
 }
