@@ -22,7 +22,6 @@ const Card = ({ card }) => {
   }, []);
 
   const handleDelete = () => {
-    console.log(currentUser);
     if (currentUser) {
       setCards(cards.filter((card) => card.id !== id));
     } else {

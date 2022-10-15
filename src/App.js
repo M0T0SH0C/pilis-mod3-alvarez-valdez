@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import dayjs from "dayjs";
 import { es } from "dayjs/locale/es";
+import { v4 as uuid } from "uuid";
 import { CardsContext } from "./context/CardsContext";
 import Login from "./routes/Login/Login.jsx";
 import CardForm from "./routes/Card/CardForm";
@@ -16,7 +17,7 @@ import Mapsygeos from "./routes/Mapsygeo/Mapsygeos";
 
 const cardList = [
   {
-    id: 1,
+    id: uuid(),
     ubication: "Ciudad Cultural",
     temperature: "18",
     latitude: "-24.1950",
@@ -27,7 +28,7 @@ const cardList = [
     date: dayjs().format(),
   },
   {
-    id: 2,
+    id: uuid(),
     ubication: "Ciudad de Nieva",
     temperature: "20",
     latitude: "-24.1861",
@@ -37,7 +38,7 @@ const cardList = [
     date: dayjs().format(),
   },
   {
-    id: 3,
+    id: uuid(),
     ubication: "Dique la Cienaga",
     temperature: "18",
     latitude: "-24.4228",
@@ -48,7 +49,7 @@ const cardList = [
     date: dayjs().format(),
   },
   {
-    id: 4,
+    id: uuid(),
     ubication: "Alto Padilla",
     temperature: "11",
     latitude: "-24.1814",
@@ -58,7 +59,7 @@ const cardList = [
     date: dayjs().format(),
   },
   {
-    id: 5,
+    id: uuid(),
     ubication: "Plaza Belgrano",
     temperature: "19",
     latitude: "-24.1862",

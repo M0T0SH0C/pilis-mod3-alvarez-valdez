@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "sweetalert2/dist/sweetalert2.css";
 import Swal from "sweetalert2";
 import dayjs from "dayjs";
+import { v4 as uuid } from "uuid";
 import { CardsContext } from "../../context/CardsContext";
 import { getForecast } from "../../service";
 import "./CardForm.css";
@@ -21,7 +22,7 @@ const Formularios = () => {
     getForecast(data.latitude, data.longitude)
       .then((res) => {
         const newCard = {
-          id: cards.length + 1,
+          id: uuid(),
           ubication: data.city,
           latitude: res.latitude,
           longitude: res.longitude,
