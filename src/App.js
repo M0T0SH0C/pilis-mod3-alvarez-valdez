@@ -6,6 +6,7 @@ import { useContext, useEffect } from "react";
 import dayjs from "dayjs";
 import { es } from "dayjs/locale/es";
 import { CardsContext } from "./context/CardsContext";
+import Login from "./routes/Login/Login.jsx";
 import CardForm from "./routes/Card/CardForm";
 import Navigation from "./routes/Navigation/Navigation";
 import DetailsCard from "./routes/Card/CardDetails";
@@ -21,7 +22,8 @@ const cardList = [
     latitude: "-24.1950",
     longitude: "-65.3138",
     windspeed: "4.1",
-    image: "https://somosjujuy-wordpress.s3.amazonaws.com/wp-content/uploads/2020/12/22210147/arbolito-ciudad-cultural.jpg",
+    image:
+      "https://somosjujuy-wordpress.s3.amazonaws.com/wp-content/uploads/2020/12/22210147/arbolito-ciudad-cultural.jpg",
     date: dayjs().format(),
   },
   {
@@ -41,7 +43,8 @@ const cardList = [
     latitude: "-24.4228",
     longitude: "-65.2842",
     windspeed: "5.1",
-    image: "https://www.amoalcamping.com.ar/img/localidades/gran/localidad-47.jpg",
+    image:
+      "https://www.amoalcamping.com.ar/img/localidades/gran/localidad-47.jpg",
     date: dayjs().format(),
   },
   {
@@ -61,7 +64,8 @@ const cardList = [
     latitude: "-24.1862",
     longitude: "-65.2993",
     windspeed: "2.3",
-    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/a1/6a/be/fuente-y-casa-de-gobierno.jpg?w=1200&h=-1&s=1",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/a1/6a/be/fuente-y-casa-de-gobierno.jpg?w=1200&h=-1&s=1",
     date: dayjs().format(),
   },
 ];
@@ -69,11 +73,7 @@ const cardList = [
 function App() {
   const { setCards } = useContext(CardsContext);
 
-  // TODO: Quitar despues de implementar el formulario
   useEffect(() => {
-    // cardList.forEach((card) => {
-    //   localStorage.setItem(card.id, JSON.stringify(card));
-    // });
     setCards(cardList);
   }, [setCards]);
 
@@ -82,6 +82,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
           <Route path="card/:id" element={<DetailsCard />} />
           <Route path="card/create" element={<CardForm />} />
           <Route path="map" element={<Mapsygeos />}></Route>

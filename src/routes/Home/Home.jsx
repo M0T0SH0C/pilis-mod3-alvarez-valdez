@@ -1,12 +1,21 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CardsContext } from "../../context/CardsContext";
+import { UserContext } from "../../context/UserContext";
 import Cards from "../../components/Card/Cards";
 import "./Home.css";
 
 const Home = () => {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   const { cards } = useContext(CardsContext);
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    const userStored = localStorage.getItem("currentUser");
+    if (userStored) {
+      setCurrentUser(JSON.parse(userStored));
+    }
+  }, []);
 
   const handleChange = (e) => {
     setQuery(e.target.value);
@@ -34,9 +43,13 @@ const Home = () => {
         <div className="w-50 p-5 m-auto text-center text-light no-cards">
           <h1>Sin tarjetas</h1>
           <p>¿Quieres agregar una nueva?</p>
-          <Link className="btn btn-light" to="/card/create">
-            Agregar
-          </Link>
+          {currentUser ? (
+            <Link className="btn btn-light" to="/card/create">
+              Agregar
+            </Link>
+          ) : (
+            <h3>Inicia sesión!!</h3>
+          )}
         </div>
       )}
       <Cards cards={cardList} />

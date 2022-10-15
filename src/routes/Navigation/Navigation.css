@@ -24,7 +24,7 @@
 }
 
 .nav-link{
-    padding: 6px 16px !important;
+    padding: 5px 10px !important;
     background-color: #356CB1;
     border-radius: 12px;
     color: #fff;
@@ -35,4 +35,8 @@
 .nav-link:hover {
     color: #fff;
     background-color: rgb(53, 108, 177, 0.8);
+}
+
+.disabled {
+    background-color: rgb(53, 108, 177, 0.4);
 }

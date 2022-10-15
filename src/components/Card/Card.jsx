@@ -1,19 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BsXLg, BsGeoAltFill, BsThermometerHalf, BsWind } from "react-icons/bs";
+import Swal from "sweetalert2";
 import { CardsContext } from "../../context/CardsContext";
 import noImg from "../../assets/no-image.svg";
 import "./Card.css";
+import { UserContext } from "../../context/UserContext";
 
 const Card = ({ card }) => {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   const { cards, setCards } = useContext(CardsContext);
   const { id, ubication, temperature, latitude, longitude, windspeed, image } =
     card;
 
+  useEffect(() => {
+    const userStored = localStorage.getItem("currentUser");
+    if (userStored) {
+      setCurrentUser(JSON.parse(userStored));
+    }
+  }, []);
+
   const handleDelete = () => {
-    setCards(cards.filter((card) => card.id !== id));
-    localStorage.removeItem(id);
+    console.log(currentUser);
+    if (currentUser) {
+      setCards(cards.filter((card) => card.id !== id));
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "No has iniciado sesión!",
+        text: "Para borrar una tarjeta debes iniciar sesión",
+        confirmButtonColor: "#356BB1",
+      });
+    }
   };
 
   return (

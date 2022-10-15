@@ -18,7 +18,7 @@ const Formularios = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    getForecast(data.latitud, data.longitud)
+    getForecast(data.latitude, data.longitude)
       .then((res) => {
         const newCard = {
           id: cards.length + 1,
@@ -30,7 +30,6 @@ const Formularios = () => {
           image: data.imagen,
           date: dayjs().format(),
         };
-        console.log(res);
         setCards([...cards, newCard]);
         Swal.fire({
           title: "Aviso",
@@ -50,11 +49,12 @@ const Formularios = () => {
           icon: "error",
           title: "Oops...",
           text: "Algo malo ha pasado!",
+          confirmButtonColor: "#356BB1",
         });
       });
   };
   return (
-    <section className="weather-content">
+    <div className="weather-content">
       <h1 className="mb-4">Nueva Tarjeta</h1>
       <form onSubmit={handleSubmit(onSubmit)} name="get-weather">
         <input
@@ -68,18 +68,18 @@ const Formularios = () => {
         <p className="label-error">{errors.city?.message}</p>
         <input
           type="text"
-          {...register("latitud", { required: "Debe igresar la latitud" })}
+          {...register("latitude", { required: "Debe igresar la latitud" })}
           placeholder="Escribe la Latitud..."
-          className={`${errors.latitud && "error"}`}
+          className={`${errors.latitude && "error"}`}
         />
-        <p className="label-error">{errors.latitud?.message}</p>
+        <p className="label-error">{errors.latitude?.message}</p>
         <input
           type="text"
-          {...register("longitud", { required: "Debe igresar la longitud" })}
+          {...register("longitude", { required: "Debe igresar la longitud" })}
           placeholder="Escribe la Longitud..."
-          className={`${errors.longitud && "error"}`}
+          className={`${errors.longitude && "error"}`}
         />
-        <p className="label-error">{errors.longitud?.message}</p>
+        <p className="label-error">{errors.longitude?.message}</p>
         <input
           type="url"
           {...register("imagen")}
@@ -87,7 +87,7 @@ const Formularios = () => {
         />
         <input type="submit" value="Crear nueva ubicacion"></input>
       </form>
-    </section>
+    </div>
   );
 };
 

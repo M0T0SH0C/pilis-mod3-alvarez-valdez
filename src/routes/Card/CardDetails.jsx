@@ -9,6 +9,7 @@ import { CardsContext } from "../../context/CardsContext";
 import { getForecastHourly } from "../../service";
 import dayjs from "dayjs";
 import "./CardDetails.css";
+import MapView from "../../components/MapView/MapView";
 
 const DetailsCard = () => {
   const { id } = useParams();
@@ -70,8 +71,8 @@ const DetailsCard = () => {
             <div className="col-lg-8 ms-3 ms-lg-0 mt-4 mt-lg-0 align-self-center">
               <Graph hourly={hourly} />
             </div>
-            <div className="col mt-4 mx-4 background map">
-              <p>Mapa</p>
+            <div className="col mt-4 mx-3 map">
+              <MapView position={[card.latitude, card.longitude]} ubication={card.ubication} />
             </div>
           </div>
         </div>

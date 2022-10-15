@@ -7,14 +7,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { CardsProvider } from "./context/CardsContext";
+import { UserProvider } from "./context/UserContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CardsProvider>
-        <App />
-      </CardsProvider>
+      <UserProvider>
+        <CardsProvider>
+          <App />
+        </CardsProvider>
+      </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

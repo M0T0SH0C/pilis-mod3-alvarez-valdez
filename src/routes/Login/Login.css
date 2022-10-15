@@ -1,44 +1,31 @@
-.weather-content {
+.login-contentainer {
+    height: calc(100vh - var(--navbar-height));
+}
+.form-login {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     backdrop-filter: blur( 4px );
     background-color: rgba(255, 255, 255, 0.1);
-    max-width: 500px;
+    width: 500px;
+    max-width: 80%;
     text-align: center;
     padding: 20px 20px 50px;
     margin: 40px auto 0;
     border-radius: 9px;
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
-.weather-content h1{
+.form-login h1{
     font-size: 34px;
     margin-bottom: 10px;
     color: #FFF;
 }
-.weather-content p{
+.form-login p{
     color: #cfcfd9;
-}
-.result{
-    margin-bottom: 8%;
-}
-.result p{
-    margin: 5px 0 5px;
-}
-.result h2{
-    font-size: 70px;
-    line-height: 70px;
-    margin: -10px 0 10px;
-    color: #fff;
-}
-.result h5{
-    font-size: 21px;
-    margin: 2px;
-    color: #fff;
 }
 form {
     display: flex;
     flex-direction: column;
 }
-form input[type="text"], form input[type="submit"], form input[type="url"],form select{
+form input {
     width: 100%;
     margin: 0px 0 20px;
     display: inline-block;
@@ -54,7 +41,7 @@ form input[type="text"], form input[type="submit"], form input[type="url"],form 
     padding-bottom: 12px;
     font-family: 'Montserrat', sans-serif;
 }
-form input[type="text"], form input[type="url"]:focus {
+form input:focus {
     outline: none;
 }
 form input[type="submit"]{
